@@ -1,9 +1,8 @@
-package Exercícios;
 //Verifique se um numero é primo
 
 import javax.swing.JOptionPane;
 
-public class ex011 {
+public class verificarNumPrimo {
   public static void main(String[] args) {
     int numero;
     boolean ehPrimo = true;

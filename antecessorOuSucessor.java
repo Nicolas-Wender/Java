@@ -1,9 +1,8 @@
-package Exercícios;
 //Ler um valor inteiro e exibir seu sucessor ou antecessor.
 
 import javax.swing.JOptionPane;
 
-public class ex004 {
+public class antecessorOuSucessor {
   public static void main(String[] args) {
     int valor;
     String escolha;

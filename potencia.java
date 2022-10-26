@@ -1,4 +1,3 @@
-package Exercícios;
 //Fazer um programa que recebe um número positivo, calcula e mostra:
 
 //  a) O número digitado ao quadrado;
@@ -8,7 +7,7 @@ package Exercícios;
 import java.lang.Math;
 import javax.swing.JOptionPane;
 
-public class ex006 {
+public class potencia {
   public static void main(String[] args) {
     int numero = Integer.parseInt(JOptionPane.showInputDialog(null, "Digite um numero: "));
     JOptionPane.showMessageDialog(null, "O valor de " + numero + " ao quadrado é: " + Math.pow(numero, 2));

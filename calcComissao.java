@@ -1,9 +1,8 @@
-package Exercícios;
 //Calcular o pagamento de comissão de vendedores de peças, levando-se em consideração que sua comissão será de 5% do total da venda e que você tem os seguintes dados: preço unitário da peça e quantidade vendida.
 
 import javax.swing.JOptionPane;
 
-public class ex003 {
+public class calcComissao {
   public static void main(String[] args) {
     int precoUn, qntVendida;
     Double comissão;

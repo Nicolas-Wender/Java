@@ -1,4 +1,3 @@
-package Exercícios;
 // A nota final de um estudante é calculada a partir de três notas atribuídas respectivamente a um trabalho de laboratório, à avaliação semestral e a um exame final. A média das três notas mencionadas anteriormente obedece aos pesos a seguir:
 
 // NOTA                      PESO
@@ -8,7 +7,7 @@ package Exercícios;
 
 import javax.swing.JOptionPane;
 
-public class ex008 {
+public class mediaAluno {
   public static void main(String[] args) {
     Double trabalho = Double.parseDouble(JOptionPane.showInputDialog(null,"Digite a nota do Trabalho de laboratório: "))*2;
     Double avaliação = Double.parseDouble(JOptionPane.showInputDialog(null,"Digite a nota da Avaliação semestral: "))*3;

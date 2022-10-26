@@ -1,9 +1,8 @@
-package Exercícios;
 //Ler a cotação do dólar e a quantidade de dólares. Converter para real e mostrar o resultado. 
 
 import javax.swing.JOptionPane;
 
-public class ex001 {
+public class cotaçãoDolar {
   public static void main(String[] aStrings) {
     double real, dolar;
 

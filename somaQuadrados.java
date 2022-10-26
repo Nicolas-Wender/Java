@@ -1,9 +1,8 @@
-package Exercícios;
 //Ler 4 números, calcular o quadrado para cada um, somar todos os quadrados e mostrar o resultado
   
 import javax.swing.JOptionPane;
 
-public class ex002{
+public class somaQuadrados{
   public static void main(String[] args){
     int somaQuadrado;
     int [] numeros = new int[4];

@@ -1,10 +1,9 @@
-package Exercícios;
 //Fazer um programa que recebe quatro números inteiros aleatórios, e em seguida, os mostra em ordem crescente.
 
 import javax.swing.JOptionPane;
 import java.util.Arrays;
 
-public class ex009 {
+public class ordemCrescente {
   public static void main(String[] args) {
     int[] numeros = new int[4];
     String array = "Os numeros ordenados são";
