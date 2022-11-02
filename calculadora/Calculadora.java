@@ -2,27 +2,21 @@
 
 
 
-
-
-
-
-
-
 import java.util.ArrayList;
 import java.util.List;
 
 public class Calculadora {
   private List<String> numeros = new ArrayList<String>();
-  private String resultado;
   private List<String> operador = new ArrayList<String>();
+  private String resultado;
 
   public void setNumeros( String numero){
     this.numeros.add(numero);
-    verificar(numeros, operador);
   }
 
   public void setOperador(String operadorBotao){
     this.operador.add(operadorBotao);
+    verificar(numeros, operador);
   }
 
   private void setResultado(Double resultadoCalc){
@@ -38,17 +32,20 @@ public class Calculadora {
       return;
     }else{
       calcular(numeros, operador);
+      numeros.remove(1);
       numeros.set(0, resultado);
+      String operadorAtual = operador.get(1);
+      operador.set(0,operadorAtual);
+      operador.remove(1);
 
     }
-
 
   }
 
   private void calcular( List<String> numeros, List<String>operador){
     
-    double numero1 = Double.parseDouble(numeros.get(1));
-    double numero2 = Double.parseDouble(numeros.get(2));
+    double numero1 = Double.parseDouble(numeros.get(0));
+    double numero2 = Double.parseDouble(numeros.get(1));
     
     switch (operador.get(0)){
       case "+": 
@@ -59,9 +56,8 @@ public class Calculadora {
         setResultado(numero1 / numero2);
       case "*": 
         setResultado(numero1 * numero2); 
-    }
-  
-  }
 
+    }
+  }
 }
 
