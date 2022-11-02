@@ -45,21 +45,21 @@ public class Calculadora {
     System.out.println(numero1);
     double numero2 = Double.parseDouble(numeros.get(1));
     System.out.println(numero2);
-    Double operação;
+    Double operacao;
 
     switch (operador.get(0)) {
       case "+":
-        operação = numero1 + numero2;
-        setResultado(operação);
+        operacao = numero1 + numero2;
+        setResultado(operacao);
       case "-":
-        operação = numero1 - numero2;
-        setResultado(operação);
+        operacao = numero1 - numero2;
+        setResultado(operacao);
       case "/":
-        operação = numero1 / numero2;
-        setResultado(operação);
+        operacao = numero1 / numero2;
+        setResultado(operacao);
       case "*":
-        operação = numero1 * numero2;
-        setResultado(operação);
+        operacao = numero1 * numero2;
+        setResultado(operacao);
 
     }
   }
