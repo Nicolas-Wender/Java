@@ -2,11 +2,11 @@
 public class MainFrame extends javax.swing.JFrame {
     Calculadora c = new Calculadora();
 
-    public void verificarNumero(String text){
-        if (text == "0" || text== ".") {
+    public void verificarNumero(String text) {
+        if (text == "0" || text == ".") {
             txtResultado.setText("");
-        } 
-        if(c.getOperadorResultado() == true){
+        }
+        if (c.getOperadorResultado() == true) {
             c.setOperadorResultado();
             txtResultado.setText("");
         }
@@ -421,16 +421,20 @@ public class MainFrame extends javax.swing.JFrame {
 
     private void jButton15ActionPerformed(java.awt.event.ActionEvent evt) {
         int num = Integer.parseInt(txtResultado.getText());
-        if(num != 0){c.setNumeros(txtResultado.getText());}
-        
+        if (num != 0) {
+            c.setNumeros(txtResultado.getText());
+        }
+
         c.setOperador("*");
         txtResultado.setText("0");
     }
 
     private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {
         int num = Integer.parseInt(txtResultado.getText());
-        if(num != 0){c.setNumeros(txtResultado.getText());}
-        
+        if (num != 0) {
+            c.setNumeros(txtResultado.getText());
+        }
+
         c.setOperador("/");
         txtResultado.setText("0");
     }
