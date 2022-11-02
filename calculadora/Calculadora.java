@@ -18,16 +18,19 @@ public class Calculadora {
   }
 
   public void zerarVariaveis(){
-    this.numeros.removeAll(numeros);
-    this.numeros.removeAll(operador);
+    this.numeros.clear();
+    this.operador.clear();
   }
 
+
   public void setNumeros(String numero) {
-    this.numeros.add(numero);
+    if(numero != "0"|| numero != "."){this.numeros.add(numero);}
+    
   }
 
   public void setOperador(String operadorBotao) {
     this.operador.add(operadorBotao);
+
     verificar(numeros, operador);
   }
 
@@ -39,19 +42,17 @@ public class Calculadora {
     return resultado;
   }
 
-  private void verificar(List<String> numeros, List<String> operador) {
-    if (numeros.size() < 2) {
-      return;
-    } else {
+  public void verificar(List<String> numeros, List<String> operador) {
+    if (numeros.size() > 1) {
       calcular(numeros, operador);
-      numeros.removeAll(numeros);
+      numeros.remove(1);
       numeros.set(0, resultado);
+    }
+    if (operador.size()>1){
       String operadorAtual = operador.get(1);
       operador.set(0, operadorAtual);
       operador.remove(1);
-
     }
-
   }
 
   private void calcular(List<String> numeros, List<String> operador) {

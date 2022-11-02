@@ -420,13 +420,17 @@ public class MainFrame extends javax.swing.JFrame {
     }
 
     private void jButton15ActionPerformed(java.awt.event.ActionEvent evt) {
-        c.setNumeros(txtResultado.getText());
+        int num = Integer.parseInt(txtResultado.getText());
+        if(num != 0){c.setNumeros(txtResultado.getText());}
+        
         c.setOperador("*");
         txtResultado.setText("0");
     }
 
     private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {
-        c.setNumeros(txtResultado.getText());
+        int num = Integer.parseInt(txtResultado.getText());
+        if(num != 0){c.setNumeros(txtResultado.getText());}
+        
         c.setOperador("/");
         txtResultado.setText("0");
     }
@@ -436,8 +440,8 @@ public class MainFrame extends javax.swing.JFrame {
         c.setNumeros(txtResultado.getText());
         c.setOperador("");
         txtResultado.setText(c.getResultado());
-        c.zerarVariaveis();
         c.setOperadorResultado();
+        c.zerarVariaveis();
     }
 
     // CE
