@@ -13,7 +13,6 @@ public class ConverterBinario {
       resultado += (Character.getNumericValue(numBinario[i]))*(Math.pow(2, i)) ;
     }
     JOptionPane.showMessageDialog(null, "Valor em decimal: " + resultado);
-    System.out.println(resultado);
-
+    
   }
 }
