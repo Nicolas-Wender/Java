@@ -1,4 +1,5 @@
 
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -6,6 +7,20 @@ public class Calculadora {
   private List<String> numeros = new ArrayList<String>();
   private List<String> operador = new ArrayList<String>();
   private String resultado;
+  private boolean operadorResultado = false;
+
+  public boolean getOperadorResultado () {
+    return operadorResultado;
+  }
+
+  public void setOperadorResultado () {
+    operadorResultado = (!operadorResultado);
+  }
+
+  public void zerarVariaveis(){
+    this.numeros.removeAll(numeros);
+    this.numeros.removeAll(operador);
+  }
 
   public void setNumeros(String numero) {
     this.numeros.add(numero);
@@ -29,7 +44,7 @@ public class Calculadora {
       return;
     } else {
       calcular(numeros, operador);
-      numeros.remove(1);
+      numeros.removeAll(numeros);
       numeros.set(0, resultado);
       String operadorAtual = operador.get(1);
       operador.set(0, operadorAtual);
@@ -47,20 +62,18 @@ public class Calculadora {
     System.out.println(numero2);
     Double operacao;
 
-    switch (operador.get(0)) {
-      case "+":
-        operacao = numero1 + numero2;
-        setResultado(operacao);
-      case "-":
-        operacao = numero1 - numero2;
-        setResultado(operacao);
-      case "/":
-        operacao = numero1 / numero2;
-        setResultado(operacao);
-      case "*":
-        operacao = numero1 * numero2;
-        setResultado(operacao);
-
+    if (operador.get(0) == "+") {
+      operacao = numero1 + numero2;
+      setResultado(operacao);
+    }else if (operador.get(0) == "-"){
+      operacao = numero1 - numero2;
+      setResultado(operacao);
+    }else if (operador.get(0) == "/"){
+      operacao = numero1 / numero2;
+      setResultado(operacao);
+    }else if (operador.get(0) == "*"){
+      operacao = numero1 * numero2;
+      setResultado(operacao);
     }
   }
 }
