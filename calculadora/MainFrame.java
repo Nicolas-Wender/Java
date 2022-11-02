@@ -108,6 +108,11 @@ public class MainFrame extends javax.swing.JFrame {
         });
 
         jButton10.setText("=");
+        jButton10.addActionListener(new java.awt.event.ActionListener() {
+          public void actionPerformed(java.awt.event.ActionEvent evt) {
+              jButton10ActionPerformed(evt);
+          }
+      });
 
         jButton11.setText("CE");
         jButton11.addActionListener(new java.awt.event.ActionListener() {
@@ -291,16 +296,31 @@ public class MainFrame extends javax.swing.JFrame {
     }                                         
 
     private void jButton17ActionPerformed(java.awt.event.ActionEvent evt) {                                          
-        txtResultado.setText(txtResultado.getText()+"-");
+      c.setNumeros(txtResultado.getText());  
+      c.setOperador("-");                                       
+      txtResultado.setText("");
     }                                         
 
     private void jButton15ActionPerformed(java.awt.event.ActionEvent evt) {                                          
-        txtResultado.setText(txtResultado.getText()+"*");
+      c.setNumeros(txtResultado.getText());  
+      c.setOperador("*");                                       
+      txtResultado.setText("");
     }                                         
 
     private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {                                          
-        txtResultado.setText(txtResultado.getText()+"/");
+      c.setNumeros(txtResultado.getText());  
+      c.setOperador("/");                                       
+      txtResultado.setText("");
     }                                         
+
+    private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) { 
+      c.setNumeros(txtResultado.getText());  
+      c.setOperador("=");
+      txtResultado.setText("");                                           
+      txtResultado.setText(c.getResultado());
+
+
+    }     
 
     private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {                                          
         txtResultado.setText("");
