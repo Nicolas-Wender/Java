@@ -1,40 +1,45 @@
-import javax.swing.JOptionPane;
+import javax.swing.*;
+import java.awt.event.ActionEvent;
 
 
 
-public class jogoDaVelha {
-  public static void main (String[] args) {
-    String tabuleiro[][] = new String[3][3];
-    String jogada = "x";
-    boolean vitoria = false;
+public class jogoDaVelha extends JFrame{
+  JButton [] bt = new JButton[9];
+  
+  public jogoDaVelha(){
+    setVisible(true);
+    setTitle("Jogo da Velha");
+    setDefaultCloseOperation(3);
+    setLayout(null);
+    setBounds(250,100,420,500);
+    int cont =0;
+    String jogada = "X";
 
-    while(vitoria == false){
-      jogoDaVelha.mudarJogada(jogada);
-      for(int i=0;i<3;i++){
-        for(int a=0; a<3;a++){
-          System.out.println(tabuleiro[i][a]);
-        }
-      }
-      vitoria = true;
-      
+    for(int i=0;i<3;i++){
+      for(int j=0;j<3;j++){
+        bt[cont] =new JButton();
+        add(bt[cont]);
+        bt[cont].setBounds((100*i)+50, (100*j)+50,95,95);
+        cont++;
+      } 
     }
 
-   
-  
+    bt[0].addActionListener(new java.awt.event.ActionListener(){
+      @Override
+      public void actionPerformed(ActionEvent ae ){
+        mudarJogada(jogada);
+      }
+    });
+
   }
 
   public static void mudarJogada(String jogada){
-    if(jogada=="x"){
+    if(jogada=="X"){
       jogada="O";
     }else{
-      jogada="x";
+      jogada="X";
     }
   }
 
- 
-  public static void jogar(String tabuleiro[][], String jogada ) {
-    int coluna =  Integer.parseInt(JOptionPane.showInputDialog(null, "Digite a linha: "));
-    int linha  =  Integer.parseInt(JOptionPane.showInputDialog(null, "Digite a coluna: "));
-    tabuleiro[coluna][linha] = jogada;
-  }
 }
+
